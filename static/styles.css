@@ -1,0 +1,76 @@
+/* Réinitialisation des styles pour le corps du document */
+body {
+    background-color: #708090; /* Gris Ardoise */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour la mise en page de la page commémorative */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container h1, .container h2 {
+    font-weight: bold;
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #333; /* Couleur de fond de la barre */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0; /* Espacement interne */
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin: 0 10px; /* Espacement horizontal entre les éléments */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte */
+    font-size: 16px;
+}
+
+.nav-item a:hover {
+    text-decoration: underline; /* Souligner le lien au survol */
+}
+
+/* Styles pour la galerie photo */
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Ajout de marge pour séparer la galerie de la biographie */
+}
+
+.gallery img {
+    max-width: 100%;
+    max-height: 15cm;
+    object-fit: contain;
+    margin: 0 5px; /* Réduction de l'espace entre les images */
+}
+
+/* Styles pour la playlist audio */
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Ajout de marge pour séparer la playlist de la galerie */
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+#play-btn, #pause-btn, #stop-btn, #prev-btn, #next-btn {
+    margin: 5px;
+}

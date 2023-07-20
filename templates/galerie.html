@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Photo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="{{ url_for('biographie') }}">Biographie</a></li>
+            <li class="nav-item"><a href="{{ url_for('galerie') }}">Galerie Photo</a></li>
+            <li class="nav-item"><a href="{{ url_for('playlist') }}">Playlist</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1 style="font-family: 'Marianne', sans-serif; font-size: 16px;"><strong>Isabel CALEIRA</strong></h1>
+        <h2 style="font-family: 'Comic Sans MS', cursive; font-size: 14px;"><strong>Galerie Photo</strong></h2>
+        <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='media/debrito.jpg') }}" alt="Photo 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='media/maya.jpg') }}" alt="Photo 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='media/missy_roumi.jpg') }}" alt="Photo 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='media/maman_noel.jpg') }}" alt="Photo 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='media/maman_mer.jpg') }}" alt="Photo 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='media/maman_kids.jpg') }}" alt="Photo 6">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='media/maman_caraibes.jpg') }}" alt="Photo 7">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='media/maman_5.jpg') }}" alt="Photo 8">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='media/maman_4.jpg') }}" alt="Photo 9">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!-- Boutons pour contrôler la musique --> 
+        <div>
+            <audio id="audio-player" controls>
+                <source src="{{ url_for('static', filename='media/1_souslevent.mp3') }}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename='media/2_sangpoursang.mp3') }}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename='media/3_mamanmae.mp3') }}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename='media/4_alwaysgaga.mp3') }}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename='media/5_lenvie.mp3') }}" type="audio/mpeg">
+            </audio>
+            <button id="play-btn">Play</button>
+            <button id="pause-btn">Pause</button>
+            <button id="stop-btn">Stop</button>
+            <button id="prev-btn">Précédent</button>
+            <button id="next-btn">Suivant</button>
+        </div> 
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

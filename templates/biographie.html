@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biographie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="{{ url_for('biographie') }}">Biographie</a></li>
+            <li class="nav-item"><a href="{{ url_for('galerie') }}">Galerie Photo</a></li>
+            <li class="nav-item"><a href="{{ url_for('playlist') }}">Playlist</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1 style="font-family: 'Marianne', sans-serif; font-size: 16px;"><strong>Isabel CALEIRA</strong></h1>
+        <h2 style="font-family: 'Comic Sans MS', cursive; font-size: 14px;"><strong>Biographie</strong></h2>
+        <p style="font-family: 'Marianne', serif; font-size: 12px;">Née Isabel Maria BARBOSA FERREIRA DE BRITO à PAREDES
+            (Portugal) le 6 avril 1963, et mariée à Thierry CALEIRA le 24 juin 2000.Ensemble, ils ont eu 2 filles:
+            Charlène, née le 2 octobre 1985 à Mont-Saint-Aignan (76), et Mélissa, née le 1er octobre 1989 à
+            Mont-Saint-Aignan (76). Isabel était aussi la grand-mère de Gabriel né le 20 mars 2010 à Rouen, Adam né le
+            16 février 2015 à Rouen et Ava née le 15 juin 2017 à Mont-Saint-Aignan (76) Ils faisaient sa joie et son
+            bonheur.
+            Isabel est décédée le 20 février 2023, entourée de ses proches à son domicile, après avoir lutté contre un
+            cancer du sein.</p>
+    </div>
+    <!-- Ajoutez cette balise dans la section <head> de votre galerie.html -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
